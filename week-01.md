@@ -195,15 +195,15 @@ __1.5.1 ทดลองแก้ไขไฟล์ README.md__
 
 ระบบจะเปิด text editor ที่มากับระบบปฏิบัติการ Windows ดังรูปที่ 15
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 15 การใช้โปรแกรม notepad.exe แก้ไขไฟล์ README.md
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-15.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-15 </b> การใช้โปรแกรม notepad.exe แก้ไขไฟล์ README.md</p>
 
 แก้ไขไฟล์ README.me  ใน notepad  โดยเพิ่มข้อความลงไปดังตัวอย่าง (ให้นักศึกษาใส่ชื่อตนเอง)
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 16 แก้ไขไฟล์ README.md โดยเพิ่มบรรทัดต่อท้ายเข้าไป
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-16.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-16 </b>แก้ไขไฟล์ README.md โดยเพิ่มบรรทัดต่อท้ายเข้าไป</p>
 
 บันทึกและปิดโปรแกรม notepad.exe
 ตรวจสอบการเปลี่ยนแปลงใน git bash โดยพิมพ์คำสั่ง git status แล้วสังเกตุผลที่ได้จากการรันคำสั่ง
@@ -211,9 +211,9 @@ __1.5.1 ทดลองแก้ไขไฟล์ README.md__
     $ git status
 	
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 17 การตรวจสอบสถานะของ git
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-17.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-17 </b>การตรวจสอบสถานะของ git</p>
 
 จะพบว่า git  ได้ทำการติดตามการเปลี่ยนแปลง  (tracking)  ของไฟล์ต่างๆ ใน repository ของเราอยู่เสมอ ถึงแม้จะเป็น local computer ก็ตาม (ไม่นับไฟล์ใน .gitignore) 
 
@@ -228,9 +228,9 @@ __1.5.2 บันทึกการเปลี่ยนแปลงบน local
 
     $ git status
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 18 การตรวจสอบสถานะของ git / ผลจากการทำคำสั่ง git add  
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-18.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-18 </b>การตรวจสอบสถานะของ git / ผลจากการทำคำสั่ง git add </p>
 
 หมายเหตุ หากมีการแก้ไขหลายๆ ไฟล์ เราอาจใช้คำสั่ง  git add --all แทนการใช้ชื่อไฟล์ได้
 Commit ไฟล์ที่เปลี่ยนแปลง เข้าสู่ repository โดยใช้คำสั่งต่อไปนี้
@@ -243,9 +243,9 @@ Commit ไฟล์ที่เปลี่ยนแปลง เข้าสู
 
 จะได้ผลดังนี้
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 19 ผลจากการทำ git commit  
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-19.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-19 </b>ผลจากการทำ git commit  </p>
 
 หมายเหตุ  รูปแบบของการ commit ประกอบด้วย คำสั่ง  git commit -m “THIS IS A COMMIT MESSAGE” โดยที่ commit message ควรเป็นข้อความที่สื่อความหมาย มีความยาวไม่มากนัก แต่ไม่สั้นจนเกินไป เช่น “1”, “2”  หรือ “a” เนื่องจากเมื่อพัฒนาไปหลายๆ รุ่น จะไม่สามารถทำความเข้าใจเหตุผลที่แก้ไข source code นั้นๆ ได้ และในการเปลี่ยนแปลงแต่ละครั้ง git จะนำ commit message นี้ไปใช้ร่วมกับการเปลี่ยนแปลงเสมอ
 
@@ -261,36 +261,36 @@ __1.6.1 การ push ขึ้นสู่ server__
 
 จะได้ผลลัพธ์คล้ายตัวอย่างในรูปที่ 20
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 20 ผลจากการทำคำสั่ง git push
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-20.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-20 </b>ผลจากการทำคำสั่ง git push</p>
 
 เมื่อเราทำการ push repository ขึ้นสู่ server แล้ว ก็ต้องทดสอบผลจากการ push  โดยการไป refresh web browser ที่สร้าง repository ไว้ ดังรูปที่ 9
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 21 การเปลี่ยนแปลงที่เกิดขึ้นบน server
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-21.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-21 </b>การเปลี่ยนแปลงที่เกิดขึ้นบน server</p>
 
 __1.6.2 การ pull มาจาก server__
 
 การเปลี่ยนแปลงใดๆ ที่เกิดขึ้นบน local computer จะถูกส่งขึ้นมาเก็บด้วยคำสั่ง git push และถ้ามีการแก้ไขไฟล์ใดๆ เกิดขึ้นบน server เราก็สามารถที่จะดึงกลับไปทำงานที่ local computer ได้เช่นกัน 
 ให้แก้ไขไฟล์ README.md โดยการคลิกที่ชื่อไฟล์ และปุ่มปากกาบริเวณด้านขวามือ
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 22 เข้าสู่โหมดการแก้ไขไฟล์ด้วย Github Text Editor
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-22.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-22 </b>เข้าสู่โหมดการแก้ไขไฟล์ด้วย Github Text Editor</p>
 
 เพิ่มข้อความที่บรรทัดล่างสุดดังตัวอย่าง
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 23 เพิ่มข้อความบางอย่างใน Github Text Editor
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-23.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-23 </b>เพิ่มข้อความบางอย่างใน Github Text Editor</p>
 
 เพิ่มข้อความในช่อง Commit changes และกดปุ่ม Commit changes สีเขียว
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 24 เพิ่มข้อความ Commit changes
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-24.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-24 </b>เพิ่มข้อความ Commit changes</p>
 
 กลับมาที่ git bash พิมพ์คำสั่ง git status สังเกตุผลการทำงาน
 
@@ -300,17 +300,17 @@ __1.6.2 การ pull มาจาก server__
 
     $ git pull
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 25 การใช้คำสั่ง git pull
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-25.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-25 </b>การใช้คำสั่ง git pull</p>
 
 ดูการเปลี่ยนแปลงในไฟล์ README.md
 
     $ notepad.exe README.md
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 26 การเปลี่ยนแปลงในไฟล์เอกสาร  README.md
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-26.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-26 </b>การเปลี่ยนแปลงในไฟล์เอกสาร  README.md</p>
 
 ### __1.7 การตรวจสอบประวัติการเปลี่ยนแปลงของไฟล์__
 
@@ -320,15 +320,15 @@ __(ก)__ เลือกชื่อ repository, ชื่อไฟล์
 
 __(ข)__ คลิกที่ปุ่ม History
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 27 การเข้าถึงประวัติของไฟล์
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-27a.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-27 </b>การเข้าถึงประวัติของไฟล์</p>
 
 เมื่อคลิกดูประวัติไฟล์ จะพบว่า  ไม่ว่าเราจะแก้ไขไฟล์ที่ไหน แต่ Git จะติดตามและบันทึกการเปลี่ยนแปลงทุกครั้งที่เราทำการ commit
 
-<p align="center">  <img src="./images/fig 1-12.png"> </p>
-รูปที่ 28 ประวัติการแก้ไขไฟล์
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-27b.png"> </p>
+
+<p align="center"> <b>รูปที่ 1-28 </b>ประวัติการแก้ไขไฟล์</p>
 
 
 
@@ -340,27 +340,16 @@ __(ข)__ คลิกที่ปุ่ม History
 
 
 
+## แบบฝึกหัด
+1. ให้นักศึกษาทดลองเพิ่มไฟล์ชื่อ  student ลงใน repository  แล้วเพิ่มรายชื่อเพื่อนในห้อง โดยเพิ่มบน notepad จำนวนครึ่งหนึ่ง และทำบน github text editor จนครบ โดยให้เขียน commit message ด้วยว่าเพิ่มจากที่ใด
 
-
-
-
-
-
-
-
-
-
-
-แบบฝึกหัด
-ให้นักศึกษาทดลองเพิ่มไฟล์ชื่อ  student ลงใน repository  แล้วเพิ่มรายชื่อเพื่อนในห้อง โดยเพิ่มบน notepad จำนวนครึ่งหนึ่ง และทำบน github text editor จนครบ โดยให้เขียน commit message ด้วยว่าเพิ่มจากที่ใด
-ให้นักศึกษาทดลองแก้ไขไฟล์ README.md ตามตารางต่อไปนี้ แล้วทำรายงานประวัติไฟล์มาส่ง
+2. ให้นักศึกษาทดลองแก้ไขไฟล์ README.md ตามตารางต่อไปนี้ แล้วทำรายงานประวัติไฟล์มาส่ง
 	
-ลำดับที่
-สถานที่แก้ไข
-สิ่งที่กระทำ
-1
-Local (Notepad)
-ลบเนื้อหาเดิมออกทั้งหมด
+    
+| ลำดับที่  | สถานที่แก้ไข | สิ่งที่กระทำ |
+|--------|-----------|--------|
+|    1   | Local (Notepad) | ลบเนื้อหาเดิมออกทั้งหมด|
+
 2
 Server (Github Text Editor)
 #include <stdio.h>
