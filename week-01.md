@@ -12,54 +12,56 @@
 __Git__ เป็นระบบควบคุมเวอร์ชัน (Version control systems) แบบ open source เป็นเครื่องมือที่ใช้บริหารจัดการการเปลี่ยนแปลงของไฟล์ต่างๆ ใน project การบันทึกการแก้ไขไฟล์แต่ละครั้งจะเรียกว่ารุ่น (revision) ซึ่งแต่ละรุ่นของการเปลี่ยนแปลงจะถูกกำกับด้วยการประทับเวลา (timestamp) และบุคคลที่ทำการเปลี่ยนแปลง ดังนั้น หากเกิดความผิดพลาดหรือเสียหายจากการแก้ไข เราก็จะสามารถย้อนเวลากลับไปยังการแก้ไขครั้งก่อนๆ ที่สมบูรณ์ได้ตามต้องการ ถือได้ว่าระบบควบคุมเวอร์ชันเป็นระบบพื้นฐานที่นิยมใช้ในการบริการจัดการ source code ของโปรแกรม ซึ่งจริงๆ แล้ว เราสามารถใช้ระบบควบคุมเวอร์ชันกับไฟล์ชนิดใดๆ หรืองานชนิดใดๆ ก็ได้ ไม่เฉพาะ source code ของโปรแกรมเท่านั้น  
 ในปัจุบัน มีระบบควบคุมเวอร์ชันให้เลือกใช้หลากหลาย ทั้งเป็นแบบฟรีและมีค่าใช้จ่าย (เช่น  Git, Mercurial, Subversion) โดย Git จะได้รับความนิยมมากกว่าชนิดอื่นๆ  การทำงานของ Git นั้นจะมีพื้นที่เก็บไฟล์ ซึ่งเรียกว่า  repositories ซึ่งเราสามารถติดตั้งบริการ git บน server ใดๆ ก็ได้ แต่ server บริการ git ที่ได้รับความนิยมในปัจจุบันได้แก่ Github, Gitlab, Bitbucket เป็นต้น ข้อดีของการใช้ server รวมก็คือ สามารถแบ่งปันและร่วมมือ ช่วยเหลือกันในแก้ไขโปรแกรมได้จากทุกคนทั่วโลก ลักษณะเฉพาะอย่างหนึ่งของ Git ก็คือ ใน folder ที่ชื่อ .git บนคอมพิวเตอร์ของเราจะเก็บทุกสิ่งที่เก็บบน server จึงมั่นใจได้ว่า เราสามารถทำงานกับระบบควบคุมเวอร์ชันได้ทั้งแบบออนไลน์และออฟไลน์ และหากเกิดกรณีที่ repository บน server เสียหาย เราก็สามารถนำทุกอย่างที่เก็บบนเครื่องกลับขึ้นไปเก็บบน server ได้
 
-**Github**
-
+***Github***
+---
 Github เป็นบริษัทหนึ่ง ที่ให้บริการ Git repository บนพื้นฐานของเว็บ (web-based Git repository hosting)  โดย Github จะให้พื้นที่เราสร้าง repository สำหรับโปรเจค ให้บริการฟังก์ชันการทำงานพื้นฐานของระบบ git เช่น การ branches, merges, และ commits อีกทั้งยังให้พื้นที่สำหรับแจ้งข้อผิดพลาด บัก หรือความต้องการเพิ่มเติม features ต่างๆ ตลอดจนมีความสามารถในการเขียนคำอธิบายแบบ wiki ใน repository นั้นๆ ด้วย  Github เป็นบริษัทที่มีมูลค่าประมาณ 2 พันล้าน USD, มีผู้ใช้ประมาณ 20 ล้านคน มี repositories ประมาณ 40 ล้าน และในจำนวนเหล่านั้น มีโปรเจคที่สำคัญมากรวมอยู่ด้วย เช่น  kernel ของ Linux , source code ของ dotnet framework จากไมโครซอฟท์ และอื่นๆ  ทำให้มีความมั่นใจในระดับหนึ่งว่าถ้า Github เกิดล่มขึ้นมา ก็จะมีเพื่อนร่วมชะตากรรมอีกไม่น้อย 
 
 ## **ขั้นตอนการทดลอง**
+----
 
-__1. เริ่มใช้งาน Github__
+## __1. เริ่มใช้งาน Github__
 
 ในการใช้งาน Github เราจะต้องมีบัญชีผู้ใช้ของ Github ซึ่งทาง Github จะให้บริการฟรีแบบไม่จำกัดจำนวน repository ซึ่งจะเป็นแบบ public นั่นหมายความว่าทุกสิ่งที่เราเก็บใน repository เหล่านั้น จะสามารถมองเห็นได้จากทุกคน ในกรณีที่เราต้องการให้ repository  เป็นแบบ private ที่สามารถกำหนดบุคคลที่อนุญาตให้เห็น repository ของเราก็สามารถทำได้ 2 แบบ คือสมัครแบบมีค่าใช้จ่ายและสมัครแบบ education ซึ่งสามารถศึกษาได้จาก Student Developer Pack   
 
 ### __1.1 สร้างบัญชีผู้ใช้งานบน Github__
 
-การสร้างบัญชีผู้ใช้บน Github ให้ไปที่ https://github.com/join จากนั้น ให้กรอกรายละเอียด ซึ่งชื่อผู้ใช้ (User name) จะถูกนำไปใช้ในหลายๆ ที่ ดังนั้นควรเป็นชื่อที่จำง่ายและพิมพ์ได้สะดวก มิฉะนั้นจะเสียเวลาในการทำงาน    
+การสร้างบัญชีผู้ใช้บน Github ให้ไปที่ ___https://github.com/join___ จากนั้น ให้กรอกรายละเอียด ซึ่งชื่อผู้ใช้ ___(User name)___ จะถูกนำไปใช้ในหลายๆ ที่ ดังนั้นควรเป็นชื่อที่จำง่ายและพิมพ์ได้สะดวก มิฉะนั้นจะเสียเวลาในการทำงาน    
 
 <p align="center">  <img src="./images/fig 1-1.png"> </p>
-<p align="center"> <b>รูปที่ 1</b> การสร้างบัญชี Github </p>
+<p align="center"> <b>รูปที่ 1-1</b> การสร้างบัญชี Github </p>
 
 ### __1.2 ติดตั้งโปรแกรม Git__
 
-1.2.1 ดาวน์โหลดโปรแกรม Git จาก https://git-scm.com/downloads โดยเลือกโปรแกรมติดตั้งให้ตรงกับระบบปฏิบัติการที่ใช้  โปรแกรมที่ดาวน์โหลดมา จะมี GUI ให้เราใช้งานด้วยซึ่งมีชื่อเรียกว่า Github desktop แต่ถ้าหากสนใจที่จะใช้ Git GUI Clients ตัวอื่นๆ ก็สามารถศึกษาได้ที่  https://git-scm.com/downloads/guis
+__1.2.1__ ดาวน์โหลดโปรแกรม Git จาก ___https://git-scm.com/downloads___ โดยเลือกโปรแกรมติดตั้งให้ตรงกับระบบปฏิบัติการที่ใช้  โปรแกรมที่ดาวน์โหลดมา จะมี GUI ให้เราใช้งานด้วยซึ่งมีชื่อเรียกว่า Github desktop แต่ถ้าหากสนใจที่จะใช้ Git GUI Clients ตัวอื่นๆ ก็สามารถศึกษาได้ที่  ___https://git-scm.com/downloads/guis___
 
-1.2.2 ติดตั้งโปรแกรม Git ตามคำแนะนำของโปรแกรมติดตั้ง
+__1.2.2__ ติดตั้งโปรแกรม Git ตามคำแนะนำของโปรแกรมติดตั้ง
 
-1.2.3 เปิดโปรแกรม Git bash จะได้หน้าต่าง terminal ที่ทำงานใน text mode
+__1.2.3__ เปิดโปรแกรม Git bash จะได้หน้าต่าง terminal ที่ทำงานใน text mode
 
-<p align="center"> <b>รูปที่ 2</b> หน้าต่าง terminal ของ git bash</p>
 
-1.2.4 ทดสอบว่าสามารถใช้งาน Git บนเครื่องของเราได้หรือไม่ ให้พิมพ์คำสั่งต่อไปนี้
+<p align="center">  <img src="./images/fig 1-2.png"> </p>
+<p align="center"> <b>รูปที่ 1-2</b> หน้าต่าง terminal ของ git bash</p>
+
+__1.2.4__ ทดสอบว่าสามารถใช้งาน Git บนเครื่องของเราได้หรือไม่ ให้พิมพ์คำสั่งต่อไปนี้
 
     $ git
 
 ถ้า terminal ตอบกลับมาว่าไม่รู้จักคำสั่ง `git` แสดงว่าการติดตั้งยังไม่สมบูรณ์ ให้กลับไปตรวจสอบขั้นตอน 1.2.2 ให้ติดตั้งเรียบร้อย
 
-<p align="center"> <b>รูปที่ 3</b> ผลการทดลองพิมพ์คำสั่ง `git`</p>
+<p align="center">  <img src="./images/fig 1-3.png"> </p>
+<p align="center"> <b>รูปที่ 1-3</b> ผลการทดลองพิมพ์คำสั่ง `git`</p>
 
-1.2.5 บอกให้ Git รู้จักชื่อของเรา โดยพิมพ์คำสั่งต่อไปนี้ 
+__1.2.5__ บอกให้ Git รู้จักชื่อของเรา โดยพิมพ์คำสั่งต่อไปนี้ 
 
     $ git config --global user.name “USER NAME”
 
 ในกรณีที่เราต้องการทราบชื่อผู้ใช้ปัจจุบัน สามารถสั่งให้ Git รายงานออกมาด้วยการพิมพ์คำสั่งต่อไปนี้
 
     $ git config user.name
+<p align="center">  <img src="./images/fig 1-4.png"> </p>
+<p align="center"> <b>รูปที่ 1-4</b> git config --global user.name `git`</p>
 
-
-
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
-
-1.2.6 บอกให้ Git รู้จัก email ของเรา  โดยพิมพ์คำสั่งต่อไปนี้
+__1.2.6__ บอกให้ Git รู้จัก email ของเรา  โดยพิมพ์คำสั่งต่อไปนี้
 
     $ git config --global user.email “USER EMAIL ADDRESS”
 
@@ -67,11 +69,12 @@ __1. เริ่มใช้งาน Github__
 
     $ git config user.email
 
-__หมายเหตุ__  email ที่ใช้จะต้องตรงกับ email ที่ลงทะเบียนไว้กับ Github มิฉะนั้นจะไม่สามารถเขียนข้อมูลขึ้นไปบน server ได้
+__หมายเหตุ__  
+___email___ ที่ใช้จะต้องตรงกับ email ที่ลงทะเบียนไว้กับ Github มิฉะนั้นจะไม่สามารถเขียนข้อมูลขึ้นไปบน server ได้
 เมื่อทำในขั้นตอน 1.2.5 และ 1.2.6 เรียบร้อยแล้ว การทำงานใดๆ บน Github ก็จะปรากฏชื่อและ Email ของเรากำกับไว้เสมอ 
 
- 
-<p align="center"> <b>รูปที่ 5</b> git config --global user.email</p>
+<p align="center">  <img src="./images/fig 1-5.png"> </p>
+<p align="center"> <b>รูปที่ 1-5</b> git config --global user.email</p>
 
 ### __1.3 สร้าง repository (บน server)__
 Repository เป็นพื้นที่สำหรับเก็บ project ของเรา ซึ่งไม่ได้หมายความถึงเฉพาะ source code เท่านั้น repository ยังสามารถประกอบด้วยไฟล์ทุกชนิด ไม่ว่าจะเป็น Word Document, spread sheet, presentation, เอกสารการออกวิเคราะห์และออกแบบซอฟต์แวร์ ไฟล์มีเดียภาพและเสียง รวมไปถึงเอกสาร Wiki ในลักษณะ html ด้วย ดังนั้น ในการทำโครงการพัฒนาซอฟต์แวร์ เราสามารถนำทุกสิ่งที่จำเป็นสำหรับการทำงาน มาใส่ไว้ใน repository  และเมื่อเพื่อนร่วมทีมหรือ user ใดๆ ทำสำเนา repository ของเราไป เขาก็จะได้ทุกสิ่งทุกอย่างไปอย่างครบถ้วน ดังนั้นจึงอาจพูดได้ว่าเราสามารถใช้ repository เป็นเครื่องมือบริหารโครงการที่มีประสิทธิภาพได้เช่นกัน  
@@ -80,42 +83,45 @@ __1.3.1 การสร้าง repository บน Github__
 
 การสร้าง repository บน Github สามารถสร้างได้หลายวิธีด้วยกัน เช่น
 
-**(1)** การสร้าง repository โดยการคลิกที่ปุ่มเครื่องหมาย “+” ที่ด้านบนขวาของหน้าเพจ  Github แล้วเลือก  new repository 
+***(1)*** การสร้าง repository โดยการคลิกที่ปุ่มเครื่องหมาย “+” ที่ด้านบนขวาของหน้าเพจ  Github แล้วเลือก  new repository 
  
  
-<p align="center"> <b> รูปที่ 6</b>การสร้าง repository โดยการคลิกที่ปุ่มเครื่องหมาย “+” </p>
+<p align="center">  <img src="./images/fig 1-6.png"> </p>
+<p align="center"> <b> รูปที่ 1-6</b>การสร้าง repository โดยการคลิกที่ปุ่มเครื่องหมาย “+” </p>
 
-**(2)** การสร้าง repository โดยการคลิกที่ปุ่ม New สีเขียว 
+
+***(2)*** การสร้าง repository โดยการคลิกที่ปุ่ม New สีเขียว 
  
+<p align="center">  <img src="./images/fig 1-7.png"> </p>
+<p align="center"> <b>รูปที่ 1-7 </b> การสร้าง repository โดยการคลิกที่ปุ่ม New </p>
 
-<p align="center"> <b>รูปที่ 7 </b> การสร้าง repository โดยการคลิกที่ปุ่ม New </p>
-
-**(3)** การสร้าง repository โดยการไปที่ https://github.com/new
-นอกจาก 3 วิธีข้างต้น ซึ่งจะพาเราไปสร้าง repository บนเว็บแล้ว เรายังสามารถสร้าง repository โดยใช้ command line บน terminal (ศึกษาได้จาก adding-an-existing-project-to-github-using-the-command-line)
+***(3)*** การสร้าง repository โดยการไปที่ ___https://github.com/new___
+นอกจาก 3 วิธีข้างต้น ซึ่งจะพาเราไปสร้าง repository บนเว็บแล้ว เรายังสามารถสร้าง repository โดยใช้ command line บน terminal (ศึกษาได้จาก `adding-an-existing-project-to-github-using-the-command-line`)
 
 __1.3.2 กำหนดชื่อและชนิดของ repository__
 
 การใช้วิธีการ 3 วิธีแรก ในข้อ 1.3.1 จะได้ผลอย่างเดียวกัน คือ Github จะพามาหน้าสำหรับสร้าง repository
 
-ในช่อง Repository name ให้ใส่ชื่อของ repository เนื่องจากบ่อยครั้งที่เราต้องใช้งานคำสั่งต่างๆ บน terminal ซึ่งต้องพิมพ์ชื่อ repository เอง ดังนั้นชื่อของ repository จะต้องมีความหมายในตัว เข้าใจง่าย กระชับ
+ในช่อง __Repository name__ ให้ใส่ชื่อของ _repository_ เนื่องจากบ่อยครั้งที่เราต้องใช้งานคำสั่งต่างๆ บน terminal ซึ่งต้องพิมพ์ชื่อ repository เอง ดังนั้นชื่อของ repository จะต้องมีความหมายในตัว เข้าใจง่าย กระชับ
 ในช่อง Description (optional) เพิ่มคำอธิบายสั้นๆ เกี่ยวกับ repository เพื่อให้ชาวโลกอ่านแล้วเห็นภาพรวมของ  repository ได้อย่างรวดเร็ว  
 ชนิดของ repository นั้น ถ้าหากเป็นโปรเจคที่เป็นความลับ ไม่อาจเปิดเผยต่อชาวโลกได้ เช่นประกอบด้วยฐานข้อมูลในงานวิจัย คะแนนแล็บของนักศึกษา ชื่อ URL, user name, password ที่เขียนลงไปใน source code  เราก็อาจจะเลือกเป็น private ซึ่งอาจจะต้องมีค่าใช้จ่ายในการสมัครสมาชิกพิเศษ หรือไม่ก็ต้องเป็น academic account ในที่นี้ให้เลือกเป็น public 
 
 ทำเครื่องหมาย ☑ หน้าข้อความ Initialize this repository with a README เพื่อให้เราสามารถเขียนบรรยายคร่าวๆ เกี่ยวกับ repository ได้
-เลือกว่าจะเพิ่ม .gitignore หรือ license file ด้วยหรือไม่ โดย .gitignore นี้จะบอก Git ว่าไม่ต้องสนใจที่จะติดตามไฟล์ชนิดใดบ้าง โดย Git จะกำหนดชนิดของไฟล์ให้เบื้องต้น เช่น ถ้าเราเลือก .gitignore เป็น ภาษา C++ แล้ว Git จะเพิ่มชนิดของไฟล์ต่างๆ ที่เป็นผลจากการคอมไพล์ไว้ในรายการที่เพิกเฉย (เช่น ไฟล์ที่มีนามสกุล .exe)  ซึ่งไฟล์เหล่านั้น มักจะเกิดจากการคอมไพล์โปรแกรม ไม่ใช่ไฟล์ที่เราเป็นคนแก้ไข source code จึงไม่จำเป็นที่จะต้องนำไปเก็บบน repository ให้สิ้นเปลืองพื้นที่ สามารถดูเทมเพลตของ .gitignore ได้จาก A collection of useful .gitignore templates
+เลือกว่าจะเพิ่ม `.gitignore` หรือ `license file` ด้วยหรือไม่ โดย `.gitignore` นี้จะบอก Git ว่าไม่ต้องสนใจที่จะติดตามไฟล์ชนิดใดบ้าง โดย Git จะกำหนดชนิดของไฟล์ให้เบื้องต้น เช่น ถ้าเราเลือก .gitignore เป็น ภาษา C++ แล้ว Git จะเพิ่มชนิดของไฟล์ต่างๆ ที่เป็นผลจากการคอมไพล์ไว้ในรายการที่เพิกเฉย (เช่น ไฟล์ที่มีนามสกุล .exe)  ซึ่งไฟล์เหล่านั้น มักจะเกิดจากการคอมไพล์โปรแกรม ไม่ใช่ไฟล์ที่เราเป็นคนแก้ไข source code จึงไม่จำเป็นที่จะต้องนำไปเก็บบน repository ให้สิ้นเปลืองพื้นที่ สามารถดูเทมเพลตของ `.gitignore` ได้จาก `A collection of useful .gitignore templates`
 
 
  
-<p align="center"> <b>รูปที่ 8</b> การสร้าง repository </p>
+<p align="center">  <img src="./images/fig 1-8.png"> </p>
+<p align="center"> <b>รูปที่ 1-8</b> การสร้าง repository </p>
 
-คลิกปุ่ม Create repository สีเขียว 
-	Github  จะสร้าง repository ให้ตามต้องการ
+คลิกปุ่ม __Create repository__ สีเขียว
 
+Github  จะสร้าง repository ให้ตามต้องการ
 
-<p align="center"> <b>รูปที่ 9 </b>repository ที่ได้จากการสร้างในข้อ 1.3</p>
+<p align="center">  <img src="./images/fig 1-9.png"> </p>
+<p align="center"> <b>รูปที่ 1-9 </b>repository ที่ได้จากการสร้างในข้อ 1.3</p>
 
-หมายเหตุ ให้เปิดหน้าเพจนี้ค้างไว้ เพราะเราต้องมาดูผลการเปลี่ยนแปลงในภายหลัง
-
+__`หมายเหตุ ให้เปิดหน้าเพจนี้ค้างไว้ เพราะเราต้องมาดูผลการเปลี่ยนแปลงในภายหลัง`__
 
 
 ### __1.4 สร้าง git บนเครื่องคอมพิวเตอร์ (Local)__
@@ -142,41 +148,39 @@ __1.4.1 การ clone repository ด้วย command line (git bash)__
 
 สังเกตุได้จาก  git bash จะแสดงชื่อของโฟลเดอร์ปัจจุบันเป็นดังรูป
 
-รูปที่ 10 หน้าต่าง terminal ของ git bash เตรียมพร้อมสำหรับการ clone
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-10.png"> </p>
+<p align="center"> <b>รูปที่ 1-10</b> หน้าต่าง terminal ของ git bash เตรียมพร้อมสำหรับการ clone</p>
 
 การทำสำเนา repository มาไว้บนเครื่องโดยการ clone
 ทำสำเนา repository มาไว้บนเครื่องโดยใช้คำสั่งที่มีรูปแบบดังต่อไปนี้
 
     $ git clone https://github.com/[YOUR USERNAME]/[YOUR REPOSITORY NAME]
 
-___[YOUR USERNAME]___ คือ username ของเราบน github
+___`[YOUR USERNAME]`___ คือ username ของเราบน github
 
-___[YOUR REPOSITORY NAME]___ คือชื่อ repository ของเราที่สร้างในข้อ 1.3 
+___`[YOUR REPOSITORY NAME]`___ คือชื่อ repository ของเราที่สร้างในข้อ 1.3 
 
-ถ้าจำไม่ได้ ก็ไม่เป็นไร ให้เข้าไปที่ repository ที่เพิ่งสร้างบน Github  (ดูรูปที่ 9) จะเห็นว่ามีปุ่ม [Clone or download] สีเขียว ให้กดเบาๆ จะได้ผลดังรูปที่ 11 ให้เรากดปุ่ม copy ที่อยู่ด้านขวามือของ url  
+ถ้าจำไม่ได้ ก็ไม่เป็นไร ให้เข้าไปที่ repository ที่เพิ่งสร้างบน Github  ___(ดูรูปที่ 1-9)___ จะเห็นว่ามีปุ่ม [__Clone or download__] สีเขียว ให้กดเบาๆ จะได้ผลดังรูปที่ 11 ให้เรากดปุ่ม copy ที่อยู่ด้านขวามือของ url  
  
-รูปที่ 11 URL สำหรับการ clone repository
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-11.png"> </p>
+<p align="center"> <b>รูปที่ 1-11</b>URL สำหรับการ clone repository</p>
 
-เมื่อทำการ clone เรียบร้อย จะได้ผลดังรูปที่ 12
+เมื่อทำการ clone เรียบร้อย จะได้ผลดังรูปที่ 1-12
 
-รูปที่ 12 ผลการ clone repository
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
+<p align="center"> <b>รูปที่ 1-12</b> ผลการ clone repository</p>
 
-เรียกดูรายการโฟลเดอร์ (ด้วยคำสั่ง ls) และเปลี่ยนโฟลเดอร์ (ด้วยคำสั่ง change directory :cd)
+เรียกดูรายการโฟลเดอร์ (ด้วยคำสั่ง `ls`) และเปลี่ยนโฟลเดอร์ (ด้วยคำสั่ง change directory :`cd`)
 
-ตอนแรกจะพบว่ามีโฟลเดอร์ชื่อ CL60-01 ซึ่งถูก clone มาจาก server จึงย้ายเข้าไปในโฟลเดอร์นั้น แล้วจึงสั่ง ls เพื่อดูรายการไฟล์ พบว่ามีรายการดังรูปที่ 13
+ตอนแรกจะพบว่ามีโฟลเดอร์ชื่อ CL60-01 ซึ่งถูก clone มาจาก server จึงย้ายเข้าไปในโฟลเดอร์นั้น แล้วจึงสั่ง ls เพื่อดูรายการไฟล์ พบว่ามีรายการดังรูปที่ 1-13
 
-  
-รูปที่ 13 ไฟล์ที่ถูก clone มาจาก repository
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
+<p align="center">  <img src="./images/fig 1-13.png"> </p>
+<p align="center"> <b>รูปที่ 1-13 </b>ไฟล์ที่ถูก clone มาจาก repository</p>
 
-ทดลองเรียกดูเนื้อหาของไฟล์ โดยใช้คำสั่ง cat
+ทดลองเรียกดูเนื้อหาของไฟล์ โดยใช้คำสั่ง `cat`
 
-รูปที่ 14 เนื้อหาของไฟล์ ที่ถูก clone มาจาก repository
-<p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
-
+<p align="center">  <img src="./images/fig 1-14.png"> </p>
+<p align="center"> <b>รูปที่ 1-14</b>เนื้อหาของไฟล์ ที่ถูก clone มาจาก repository</p>
 
 ### __1.5 การแก้ไขงานและบันทึกการเปลี่ยนแปลงบน local computer__
 
@@ -191,11 +195,13 @@ __1.5.1 ทดลองแก้ไขไฟล์ README.md__
 
 ระบบจะเปิด text editor ที่มากับระบบปฏิบัติการ Windows ดังรูปที่ 15
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 15 การใช้โปรแกรม notepad.exe แก้ไขไฟล์ README.md
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
 แก้ไขไฟล์ README.me  ใน notepad  โดยเพิ่มข้อความลงไปดังตัวอย่าง (ให้นักศึกษาใส่ชื่อตนเอง)
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 16 แก้ไขไฟล์ README.md โดยเพิ่มบรรทัดต่อท้ายเข้าไป
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
@@ -205,6 +211,7 @@ __1.5.1 ทดลองแก้ไขไฟล์ README.md__
     $ git status
 	
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 17 การตรวจสอบสถานะของ git
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
@@ -221,6 +228,7 @@ __1.5.2 บันทึกการเปลี่ยนแปลงบน local
 
     $ git status
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 18 การตรวจสอบสถานะของ git / ผลจากการทำคำสั่ง git add  
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
@@ -235,6 +243,7 @@ Commit ไฟล์ที่เปลี่ยนแปลง เข้าสู
 
 จะได้ผลดังนี้
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 19 ผลจากการทำ git commit  
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
@@ -252,11 +261,13 @@ __1.6.1 การ push ขึ้นสู่ server__
 
 จะได้ผลลัพธ์คล้ายตัวอย่างในรูปที่ 20
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 20 ผลจากการทำคำสั่ง git push
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
 เมื่อเราทำการ push repository ขึ้นสู่ server แล้ว ก็ต้องทดสอบผลจากการ push  โดยการไป refresh web browser ที่สร้าง repository ไว้ ดังรูปที่ 9
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 21 การเปลี่ยนแปลงที่เกิดขึ้นบน server
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
@@ -265,16 +276,19 @@ __1.6.2 การ pull มาจาก server__
 การเปลี่ยนแปลงใดๆ ที่เกิดขึ้นบน local computer จะถูกส่งขึ้นมาเก็บด้วยคำสั่ง git push และถ้ามีการแก้ไขไฟล์ใดๆ เกิดขึ้นบน server เราก็สามารถที่จะดึงกลับไปทำงานที่ local computer ได้เช่นกัน 
 ให้แก้ไขไฟล์ README.md โดยการคลิกที่ชื่อไฟล์ และปุ่มปากกาบริเวณด้านขวามือ
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 22 เข้าสู่โหมดการแก้ไขไฟล์ด้วย Github Text Editor
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
 เพิ่มข้อความที่บรรทัดล่างสุดดังตัวอย่าง
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 23 เพิ่มข้อความบางอย่างใน Github Text Editor
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
 เพิ่มข้อความในช่อง Commit changes และกดปุ่ม Commit changes สีเขียว
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 24 เพิ่มข้อความ Commit changes
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
@@ -286,6 +300,7 @@ __1.6.2 การ pull มาจาก server__
 
     $ git pull
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 25 การใช้คำสั่ง git pull
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
@@ -293,6 +308,7 @@ __1.6.2 การ pull มาจาก server__
 
     $ notepad.exe README.md
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 26 การเปลี่ยนแปลงในไฟล์เอกสาร  README.md
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
@@ -304,11 +320,13 @@ __(ก)__ เลือกชื่อ repository, ชื่อไฟล์
 
 __(ข)__ คลิกที่ปุ่ม History
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 27 การเข้าถึงประวัติของไฟล์
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
 เมื่อคลิกดูประวัติไฟล์ จะพบว่า  ไม่ว่าเราจะแก้ไขไฟล์ที่ไหน แต่ Git จะติดตามและบันทึกการเปลี่ยนแปลงทุกครั้งที่เราทำการ commit
 
+<p align="center">  <img src="./images/fig 1-12.png"> </p>
 รูปที่ 28 ประวัติการแก้ไขไฟล์
 <p align="center"> <b>รูปที่ 4</b> git config --global user.name `git`</p>
 
