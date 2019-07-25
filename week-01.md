@@ -332,37 +332,56 @@ __(ข)__ คลิกที่ปุ่ม History
 
 
 
+## __`จบการทดลอง`__
 
-
-
-
-
-
-
-
+----
 ## แบบฝึกหัด
 1. ให้นักศึกษาทดลองเพิ่มไฟล์ชื่อ  student ลงใน repository  แล้วเพิ่มรายชื่อเพื่อนในห้อง โดยเพิ่มบน notepad จำนวนครึ่งหนึ่ง และทำบน github text editor จนครบ โดยให้เขียน commit message ด้วยว่าเพิ่มจากที่ใด
 
 2. ให้นักศึกษาทดลองแก้ไขไฟล์ README.md ตามตารางต่อไปนี้ แล้วทำรายงานประวัติไฟล์มาส่ง
 	
-    
-| ลำดับที่  | สถานที่แก้ไข | สิ่งที่กระทำ |
-|--------|-----------|--------|
-|    1   | Local (Notepad) | ลบเนื้อหาเดิมออกทั้งหมด|
 
-2
-Server (Github Text Editor)
+<table>
+<tr>
+<th> ลำดับที่</th>
+<th> สถานที่แก้ไข</th>
+<th> สิ่งที่กระทำ</th>
+<tr> <td> 1 </td><td> Local (Notepad) </td><td> ลบเนื้อหาเดิมออกทั้งหมด</td></tr>
+<tr>
+<td>2</td><td>Server (Github Text Editor)</td>
+<td>
+
+```cpp
 #include <stdio.h>
 main( )
 {
-        printf("hello, world\n");
+    printf("hello, world\n");
 }
-3
-Local (Notepad)
-เปลี่ยน printf("hello, world\n");
-เป็น printf("hello, [ชื่อนักศึกษา]\n");
-4
-Server (Github Text Editor)
+```
+</td>
+
+</tr>
+
+<tr>
+<td>3</td><td>Local (Notepad)</td>
+<td>
+เปลี่ยน 
+
+```cpp 
+printf("hello, world\n");
+```
+เป็น 
+```cpp
+printf("hello, [ชื่อนักศึกษา]\n");
+```
+</td>
+</tr>
+
+<tr>
+<td>4</td><td>Server (Github Text Editor)</td>
+<td>
+
+```cpp 
 #include <stdio.h>
 int main ()
 {
@@ -371,22 +390,44 @@ int main ()
    scanf("%s",yourname);
     printf("hello, %s\n", yourname);
 }
-5
-Local (Notepad)
-เพิ่ม printf("Goodbye\n"); 
-ใต้ printf("hello, %s\n", yourname);
+```
+</td>
+</tr>
+
+<tr>
+<td>5</td><td>Local (Notepad)</td>
+<td>
+
+เพิ่ม 
+
+```cpp 
+printf("Goodbye\n"); 
+```
+
+ใต้ 
+
+```cppp 
+printf("hello, %s\n", yourname);
+```
+</td>
+</tr>
+
+</table>   
+    
 
 หมายเหตุ การทำแต่ละขั้น ให้ local และ server ซิงค์กันเสมอ (ต้อง push, pull, commit, add ) 
 
+----
+
+## คำถาม
+
+<p align="center">  <img src="./images/fig 1-q1.png"> </p>
 
 
+ จากภาพตัวอย่าง ถ้าหากนักศึกษาคลิกตามปุ่ม ที่มีเลขฐานสิบหกกำกับอยู่ จะได้ผลอย่างไรบ้าง ให้อธิบายสิ่งที่พบเห็น
 
 
-
-คำถาม จากภาพตัวอย่าง ถ้าหากนักศึกษาคลิกตามปุ่ม ที่มีเลขฐานสิบหกกำกับอยู่ จะได้ผลอย่างไรบ้าง ให้อธิบายสิ่งที่พบเห็น
-
-
-
+----
 
 
 
