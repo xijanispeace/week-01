@@ -1,4 +1,5 @@
-# Lab 1
-## ใบงานที่ 1
-
-การทดลอง
+# Lab 1 Tools for programming 
+## Text Editor 
+## Git tools
+### Repository concept
+ 
