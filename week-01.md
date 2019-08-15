@@ -114,11 +114,10 @@ __1.3.2 กำหนดชื่อและชนิดของ repository__
 __ในภาพตัวอย่าง จะเป็น CL60 ให้นักศึกษาใช้เลขตามรหัสนักศึกษาของตนเองแทน เช่น ถ้ารหัสนักศึกษาขึ้นต้นด้วย 61 ก็ให้ใช้  CL61-01 เป็นต้น__
 
  
-<p align="center">  <img src="./images/fig 1-8.png"> </p>
-<p align="center"> <b>รูปที่ 1-8</b> การสร้าง repository </p>
 
- __ผลการทดลอง__
-<p align="center">  <img src="./f1.PNG"> </p>
+<p align="center"> <b>รูปที่ 1-8</b> การสร้าง repository </p>
+<p align="center"> <b>ผลการทดลอง</p>
+<p align="center">  <img src="./test1.jpg"> </p>
 
 
 คลิกปุ่ม __Create repository__ สีเขียว
